@@ -1,5 +1,6 @@
 Revision history for Perl extension Algorithm-C3.
 
+0.09 - 2014-03-01
     - convert to use ExtUtils::MakeMaker using distar
     - include repo and bugtracker metadata
 
