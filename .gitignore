@@ -9,8 +9,11 @@ _build
 inc
 pm_to_blib
 MANIFEST*
-!MANIFEST.SKIP
 Debian*
 README
-App-Software-License-*
+Algorithm-C3-*
 *.bs
+/Makefile
+/Makefile.old
+/MYMETA.*
+/Distar
