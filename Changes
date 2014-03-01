@@ -1,5 +1,8 @@
 Revision history for Perl extension Algorithm-C3.
 
+    - convert to use ExtUtils::MakeMaker using distar
+    - include repo and bugtracker metadata
+
 0.08 Thu. May 28, 2009
     - Fix a couple of doc typos.
     - Don't create a fake Makefile.PL.
