@@ -19,6 +19,7 @@ WriteMakefile(
     'Carp' => 0.01,
     ($mymeta_works ? () : (%BUILD_DEPS)),
   },
+  MIN_PERL_VERSION => 5.006,
   $mymeta_works ? (BUILD_REQUIRES => \%BUILD_DEPS) : (),
   ($mymeta && !$mymeta_works ? (NO_MYMETA => 1) : ()),
 
