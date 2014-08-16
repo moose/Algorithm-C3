@@ -1,5 +1,6 @@
 Revision history for Perl extension Algorithm-C3.
 
+0.10 - 2014-08-15
     - declare minimum version of perl as 5.6 in metadata
 
 0.09 - 2014-03-01
