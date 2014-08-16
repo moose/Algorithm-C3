@@ -1,5 +1,7 @@
 Revision history for Perl extension Algorithm-C3.
 
+    - declare minimum version of perl as 5.6 in metadata
+
 0.09 - 2014-03-01
     - convert to use ExtUtils::MakeMaker using distar
     - include repo and bugtracker metadata
