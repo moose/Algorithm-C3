@@ -1,11 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
+use Test::More tests => 4;
 
-BEGIN {
-    use_ok('Algorithm::C3');
-}
+use Algorithm::C3;
 
 {
     package My::A;

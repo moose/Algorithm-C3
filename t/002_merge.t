@@ -1,11 +1,9 @@
 use strict;
 use warnings;
 
-use Test::More tests => 7;
+use Test::More tests => 6;
 
-BEGIN {
-    use_ok('Algorithm::C3');
-}
+use Algorithm::C3;
 
 =pod
 
