@@ -28,12 +28,12 @@ except TypeError:
 
 {
     package X;
-    
+
     package Y;
-    
+
     package XY;
     our @ISA = ('X', 'Y');
-    
+
     package YX;
     our @ISA = ('Y', 'X');
 
@@ -41,10 +41,10 @@ except TypeError:
     our @ISA = ('XY', 'YX');
 }
 
-eval { 
+eval {
     Algorithm::C3::merge('Z' => sub {
         no strict 'refs';
         @{$_[0] . '::ISA'};
-    }) 
+    })
 };
 like($@, qr/^Inconsistent hierarchy/, '... got the right error with an inconsistent hierarchy');

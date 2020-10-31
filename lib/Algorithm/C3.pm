@@ -1,4 +1,3 @@
-
 package Algorithm::C3;
 
 use strict;

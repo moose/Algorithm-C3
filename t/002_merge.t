@@ -49,28 +49,28 @@ Level 0                 0 | A |                (more specialized)
 
 {
     package Test::O;
-    
+
     sub supers {
         no strict 'refs';
         @{$_[0] . '::ISA'};
-    }    
-    
-    package Test::F;   
-    use base 'Test::O';        
-    
+    }
+
+    package Test::F;
+    use base 'Test::O';
+
     package Test::E;
-    use base 'Test::O';    
+    use base 'Test::O';
 
     package Test::D;
-    use base 'Test::O';     
-      
+    use base 'Test::O';
+
     package Test::C;
     use base ('Test::D', 'Test::F');
-        
-    package Test::B;    
-    use base ('Test::D', 'Test::E');    
-        
-    package Test::A;    
+
+    package Test::B;
+    use base ('Test::D', 'Test::E');
+
+    package Test::A;
     use base ('Test::B', 'Test::C');
 }
 
@@ -82,26 +82,25 @@ is_deeply(
 is_deeply(
     [ Algorithm::C3::merge('Test::E', 'supers') ],
     [ qw(Test::E Test::O) ],
-    '... got the right C3 merge order for Test::E');    
+    '... got the right C3 merge order for Test::E');
 
 is_deeply(
     [ Algorithm::C3::merge('Test::D', 'supers') ],
     [ qw(Test::D Test::O) ],
-    '... got the right C3 merge order for Test::D');       
+    '... got the right C3 merge order for Test::D');
 
 is_deeply(
     [ Algorithm::C3::merge('Test::C', 'supers') ],
     [ qw(Test::C Test::D Test::F Test::O) ],
-    '... got the right C3 merge order for Test::C'); 
+    '... got the right C3 merge order for Test::C');
 
 is_deeply(
     [ Algorithm::C3::merge('Test::B', 'supers') ],
     [ qw(Test::B Test::D Test::E Test::O) ],
-    '... got the right C3 merge order for Test::B');     
+    '... got the right C3 merge order for Test::B');
 
 is_deeply(
     [ Algorithm::C3::merge('Test::A', 'supers') ],
     [ qw(Test::A Test::B Test::C Test::D Test::E Test::F Test::O) ],
-    '... got the right C3 merge order for Test::A');  
-    
+    '... got the right C3 merge order for Test::A');
 

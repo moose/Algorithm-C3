@@ -54,27 +54,27 @@ Level 0                0 | A |
 
 {
     package Test::O;
-    
+
     sub supers {
         no strict 'refs';
         @{$_[0] . '::ISA'};
     }
-    
+
     package Test::F;
     use base 'Test::O';
-    
+
     package Test::E;
     use base 'Test::O';
-        
+
     package Test::D;
-    use base 'Test::O';    
-        
+    use base 'Test::O';
+
     package Test::C;
     use base ('Test::D', 'Test::F');
-    
+
     package Test::B;
     use base ('Test::E', 'Test::D');
-        
+
     package Test::A;
     use base ('Test::B', 'Test::C');
 }
@@ -82,4 +82,4 @@ Level 0                0 | A |
 is_deeply(
     [ Algorithm::C3::merge('Test::A', 'supers') ],
     [ qw(Test::A Test::B Test::E Test::C Test::D Test::F Test::O) ],
-    '... got the right C3 merge order for Test::A');      
+    '... got the right C3 merge order for Test::A');

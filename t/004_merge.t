@@ -16,7 +16,7 @@ example taken from: L<http://gauss.gwydiondylan.org/books/drm/drm_50.html>
          Object
            ^
            |
-        LifeForm 
+        LifeForm
          ^    ^
         /      \
    Sentient    BiPedal
@@ -36,28 +36,28 @@ example taken from: L<http://gauss.gwydiondylan.org/books/drm/drm_50.html>
 =cut
 
 {
-    package Object;    
-    
+    package Object;
+
     sub my_ISA {
         no strict 'refs';
         @{$_[0] . '::ISA'};
-    }    
-    
+    }
+
     package LifeForm;
     use base 'Object';
-    
+
     package Sentient;
     use base 'LifeForm';
-    
+
     package BiPedal;
     use base 'LifeForm';
-    
+
     package Intelligent;
     use base 'Sentient';
-    
+
     package Humanoid;
     use base 'BiPedal';
-    
+
     package Vulcan;
     use base ('Intelligent', 'Humanoid');
 }
