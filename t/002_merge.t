@@ -52,22 +52,22 @@ class A(B,C): pass
     }
 
     package Test::F;
-    use base 'Test::O';
+    our @ISA = qw(Test::O);
 
     package Test::E;
-    use base 'Test::O';
+    our @ISA = qw(Test::O);
 
     package Test::D;
-    use base 'Test::O';
+    our @ISA = qw(Test::O);
 
     package Test::C;
-    use base ('Test::D', 'Test::F');
+    our @ISA = qw(Test::D Test::F);
 
     package Test::B;
-    use base ('Test::D', 'Test::E');
+    our @ISA = qw(Test::D Test::E);
 
     package Test::A;
-    use base ('Test::B', 'Test::C');
+    our @ISA = qw(Test::B Test::C);
 }
 
 is_deeply(

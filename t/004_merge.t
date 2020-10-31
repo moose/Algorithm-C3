@@ -40,22 +40,22 @@ example taken from: L<http://gauss.gwydiondylan.org/books/drm/drm_50.html>
     }
 
     package LifeForm;
-    use base 'Object';
+    our @ISA = qw(Object);
 
     package Sentient;
-    use base 'LifeForm';
+    our @ISA = qw(LifeForm);
 
     package BiPedal;
-    use base 'LifeForm';
+    our @ISA = qw(LifeForm);
 
     package Intelligent;
-    use base 'Sentient';
+    our @ISA = qw(Sentient);
 
     package Humanoid;
-    use base 'BiPedal';
+    our @ISA = qw(BiPedal);
 
     package Vulcan;
-    use base ('Intelligent', 'Humanoid');
+    our @ISA = qw(Intelligent Humanoid);
 }
 
 is_deeply(

@@ -60,28 +60,28 @@ KJIHGFEDABC
     sub x { 1 }
 
     package Test::D;
-    use base qw/Test::A Test::B Test::C/;
+    our @ISA = qw(Test::A Test::B Test::C);
 
     package Test::E;
-    use base qw/Test::D/;
+    our @ISA = qw(Test::D);
 
     package Test::F;
-    use base qw/Test::E/;
+    our @ISA = qw(Test::E);
 
     package Test::G;
-    use base qw/Test::D/;
+    our @ISA = qw(Test::D);
 
     package Test::H;
-    use base qw/Test::G/;
+    our @ISA = qw(Test::G);
 
     package Test::I;
-    use base qw/Test::H Test::F/;
+    our @ISA = qw(Test::H Test::F);
 
     package Test::J;
-    use base qw/Test::F/;
+    our @ISA = qw(Test::F);
 
     package Test::K;
-    use base qw/Test::J Test::I/;
+    our @ISA = qw(Test::J Test::I);
 }
 
 sub supers {
