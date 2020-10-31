@@ -21,27 +21,27 @@ class B(D,E): pass
 class A(B,C): pass
 
 
-                          6
-                         ---
-Level 3                 | O |                  (more general)
-                      /  ---  \
-                     /    |    \                      |
-                    /     |     \                     |
-                   /      |      \                    |
-                  ---    ---    ---                   |
-Level 2        3 | D | 4| E |  | F | 5                |
-                  ---    ---    ---                   |
-                   \  \ _ /       |                   |
-                    \    / \ _    |                   |
-                     \  /      \  |                   |
-                      ---      ---                    |
-Level 1            1 | B |    | C | 2                 |
-                      ---      ---                    |
-                        \      /                      |
-                         \    /                      \ /
-                           ---
-Level 0                 0 | A |                (more specialized)
-                           ---
+                              6
+                             ---
+    Level 3                 | O |                  (more general)
+                          /  ---  \
+                         /    |    \                      |
+                        /     |     \                     |
+                       /      |      \                    |
+                      ---    ---    ---                   |
+    Level 2        3 | D | 4| E |  | F | 5                |
+                      ---    ---    ---                   |
+                       \  \ _ /       |                   |
+                        \    / \ _    |                   |
+                         \  /      \  |                   |
+                          ---      ---                    |
+    Level 1            1 | B |    | C | 2                 |
+                          ---      ---                    |
+                            \      /                      |
+                             \    /                      \ /
+                              ---
+    Level 0                0 | A |                (more specialized)
+                              ---
 
 =cut
 

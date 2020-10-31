@@ -1,49 +1,47 @@
 use strict;
 use warnings;
 
-use Test::More tests => 12;
+use Test::More tests => 11;
 
-BEGIN {
-    use_ok('Algorithm::C3');
-}
+use Algorithm::C3;
 
 =pod
 
 This example is taken from: http://rt.cpan.org/Public/Bug/Display.html?id=20879
 
-               ---     ---     ---
-Level 5     8 | A | 9 | B | A | C |    (More General)
-               ---     ---     ---       V
-                  \     |     /          |
-                   \    |    /           |
-                    \   |   /            |
-                     \  |  /             |
-                       ---               |
-Level 4             7 | D |              |
-                       ---               |
-                      /   \              |
-                     /     \             |
-                  ---       ---          |
-Level 3        4 | G |   6 | E |         |
-                  ---       ---          |
-                   |         |           |
-                   |         |           |
-                  ---       ---          |
-Level 2        3 | H |   5 | F |         |
-                  ---       ---          |
-                      \   /  |           |
-                       \ /   |           |
-                        \    |           |
-                       / \   |           |
-                      /   \  |           |
-                  ---       ---          |
-Level 1        1 | J |   2 | I |         |
-                  ---       ---          |
-                    \       /            |
-                     \     /             |
-                       ---               v
-Level 0             0 | K |            (More Specialized)
-                       ---
+                   ---     ---     ---
+    Level 5     8 | A | 9 | B | A | C |    (More General)
+                   ---     ---     ---       V
+                      \     |     /          |
+                       \    |    /           |
+                        \   |   /            |
+                         \  |  /             |
+                           ---               |
+    Level 4             7 | D |              |
+                           ---               |
+                          /   \              |
+                         /     \             |
+                      ---       ---          |
+    Level 3        4 | G |   6 | E |         |
+                      ---       ---          |
+                       |         |           |
+                       |         |           |
+                      ---       ---          |
+    Level 2        3 | H |   5 | F |         |
+                      ---       ---          |
+                          \   /  |           |
+                           \ /   |           |
+                            \    |           |
+                           / \   |           |
+                          /   \  |           |
+                      ---       ---          |
+    Level 1        1 | J |   2 | I |         |
+                      ---       ---          |
+                        \       /            |
+                         \     /             |
+                           ---               v
+    Level 0             0 | K |            (More Specialized)
+                           ---
 
 
 0123456789A
