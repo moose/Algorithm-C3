@@ -31,8 +31,8 @@ my %META = (
   },
   resources => {
     repository => {
-      url => 'git://git.shadowcat.co.uk/gitmo/Algorithm-C3.git',
-      web => 'http://git.shadowcat.co.uk/gitweb/gitweb.cgi?p=gitmo/Algorithm-C3.git',
+      url => 'https://github.com/moose/Algorithm-C3.git',
+      web => 'https://github.com/moose/Algorithm-C3',
       type => 'git',
     },
     bugtracker => {
