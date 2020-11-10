@@ -1,5 +1,6 @@
 Revision history for Perl extension Algorithm-C3.
 
+    - set metadata for static dependency list and install
     - move repository to github
     - minor test cleanups
     - fix Makefile.PL to work for authors in perl 5.26+
