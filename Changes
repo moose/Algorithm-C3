@@ -1,5 +1,6 @@
 Revision history for Perl extension Algorithm-C3.
 
+0.11 - 2020-11-10
     - set metadata for static dependency list and install
     - move repository to github
     - minor test cleanups
